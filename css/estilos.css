@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@100;900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 ;
+}
+
+nav {
+    color: rgb(82, 62, 62);
+    width: 100vw;
+    height: 17.83vh;
+    background-color: #ff6b39;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 800;
+
+}
+
+.mostrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    left: 0;
+    top: 10vh;
+    background-color: rgb(83, 83, 83);
+    width: 100vw;
+    padding: 2vw;
+    min-height: 30vh;
+    
+
+}
+
+nav div {
+
+    display: flex;
+    width: 24.11%;
+
+    justify-content: space-between;
+    
+
+}
+
+
+
+nav,
+header,
+main {
+    width: 100vw;
+    padding: 0 8.33vw;
+}
+
+section { 
+    width: 100%;
+    display: flex;
+   justify-content: space-between;
+   flex-wrap:wrap;
+   align-content: space-around;
+   /*manejar el espacio entre las filas de elementos con flex*/
+   height: 100vh;
+
+}
+
+main div {
+    width: 45.83%;
+  
+
+}
+
+div img, video {
+
+width: 100%;
+
+}
+
+header {
+    height: 45.30vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+h1 {
+    margin: 0;
+
+    font-size: 40px;
+}
+
+h1,
+header h3,
+nav a,
+header a {
+    line-height: 125%;
+}
+
+nav h1 {
+
+    font-weight: 300;
+
+
+}
+
+header h1 {
+    font-family: 'Lora', serif;
+
+}
+
+header h3 {
+    text-transform: uppercase;
+    color: #79a375;
+    letter-spacing: 5px;
+    font-weight: 300;
+
+}
+
+header p {
+    font-size: 20px;
+}
+
+
+header a,
+nav a {
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    
+}
+
+a:hover {
+    color: #79a375
+}
+
+.logo {
+    width: 150px;
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+div img:hover {
+    transform: scale(1.02);
+}
+
+
+@keyframes rotate {
+    0% {
+    transform: rotateX(0deg);}
+
+    100% {
+     transform: rotateX(360deg);}}
+
+header a {
+
+    color: black;
+    border-color: #212529;
+    border: 2px solid #79a375;
+
+}
+
+nav span {
+    display: none;
+}
+
+/*oculto en la generalidad el menú hamburguesa*/
+
+.icon-menu::before {
+
+    color: rgb(55, 55, 55);
+    font-size: 6vw;
+
+
+}
+
+span.icon-menu:hover {
+    cursor: pointer;
+
+
+}
+
+
+.lightboxOverlay { background-color: gray;
+  
+
+}
+
+
+
+footer {
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff6b39;
+    ;;
+}
+
+
+
+@media(max-width: 1024px) {
+  
+    nav div {
+        width: 50%;
+    }
+
+    header, section { 
+        margin-bottom: 20px;
+        height: auto;}
+
+}
+
+
+@media (max-width: 768px) {
+
+    nav div {
+        display: none;
+    }
+
+    /*desaparece el grupo de links*/
+
+    nav span {
+        display: inline;
+    }
+
+    section div {
+    width: 100%;
+    margin-bottom: 2vh;
+    
+
+    }
+
+    /*vuelvo a mostrar el menú hamburguesa*/
+
+}
